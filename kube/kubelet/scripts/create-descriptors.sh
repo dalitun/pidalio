@@ -63,11 +63,13 @@ then
         /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create -f /etc/kubernetes/descriptors/monitoring --namespace=monitoring
     fi
 fi
+
 # Initialize Toolbox
+: '
 ssh-keygen -t rsa -f key
 /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create secret generic toolbox --from-file=ssh-privatekey=key --from-file=ssh-publickey=key.pub
 rm -f key key.pub
-# Openstack secrets
+ Openstack secrets
 source /etc/openstack.env
 OS_USERNAME=$(echo -n $OS_USERNAME | base64)
 OS_PASSWORD=$(echo -n $OS_PASSWORD | base64)
@@ -86,4 +88,5 @@ cat <<EOF | kubectl --kubeconfig=/home/core/.kube/config create -f -
     username: $OS_USERNAME
 EOF
 /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create -f /etc/kubernetes/descriptors/toolbox/
+'
 exit 0

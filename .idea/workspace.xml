@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73f3338e-b48a-437d-95ed-fbce97b5c654" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-osd-v1-ds-disk.yaml" afterPath="$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-osd-v1-ds-disk.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kube/kubelet/scripts/create-descriptors.sh" afterPath="$PROJECT_DIR$/kube/kubelet/scripts/create-descriptors.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create-descriptors.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create-descriptors.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kube/kubelet/scripts/create-descriptors.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+            <state relative-caret-position="262">
+              <caret line="67" column="2" lean-forward="false" selection-start-line="67" selection-start-column="2" selection-end-line="67" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ceph-osd-v1-ds-disk.yaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ceph-osd-v1-ds-disk.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-osd-v1-ds-disk.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="524">
@@ -71,8 +71,8 @@
         <option value="$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-mon-check-v1-dp.yaml" />
         <option value="$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-mon-v1-dp.yaml" />
         <option value="$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-mds-v1-dp.yaml" />
-        <option value="$PROJECT_DIR$/kube/kubelet/scripts/create-descriptors.sh" />
         <option value="$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-osd-v1-ds-disk.yaml" />
+        <option value="$PROJECT_DIR$/kube/kubelet/scripts/create-descriptors.sh" />
       </list>
     </option>
   </component>
@@ -253,32 +253,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="descriptors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pidalio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pidalio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kube" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kubelet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="descriptors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ceph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1065,12 +1039,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495014564903</updated>
-      <workItem from="1495014566703" duration="16045000" />
+      <workItem from="1495014566703" duration="16930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16045000" />
+    <option name="totallyTimeSpent" value="16930000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="26" width="1608" height="854" extended-state="6" />
@@ -1262,18 +1236,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kube/kubelet/scripts/create-descriptors.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-osd-v1-ds-disk.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="70" column="14" lean-forward="false" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kube/kubelet/scripts/create-descriptors.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="67" column="2" lean-forward="false" selection-start-line="67" selection-start-column="2" selection-end-line="67" selection-end-column="2" />
           <folding />
         </state>
       </provider>
