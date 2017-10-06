@@ -68,6 +68,8 @@ spec:
               value: ceph
             - name: CEPH_GET_ADMIN_KEY
               value: "1"
+            - name: OSD_FORCE_ZAP
+              value: "1"
           livenessProbe:
               tcpSocket:
                 port: 6800
