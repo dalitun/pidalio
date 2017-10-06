@@ -13,7 +13,6 @@ if [[ $i == 5 ]]; then exit 1; fi
 /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create -f /etc/kubernetes/descriptors/dns
 sleep 20
 # Initialize Ceph
-:'
 if [[ "${CEPH}" == "True" ]]
 then
     /opt/pidalio/kube/kubelet/scripts/ceph/install-ceph.sh
@@ -38,7 +37,9 @@ then
         -f /etc/kubernetes/descriptors/ceph/ceph-stats-v1-dp.yaml \
         -f /etc/kubernetes/descriptors/ceph/ceph-stats-v1-svc.yaml
     fi
-    until [ "$(/opt/bin/kubectl --kubeconfig=/home/core/.kube/config get pods --namespace=ceph | tail -n +2 | egrep -v '(.*)1/1(.*)Running' | wc -l)" == "0" ]
+
+
+   until [ "$(/opt/bin/kubectl --kubeconfig=/home/core/.kube/config get pods --namespace=ceph | tail -n +2 | egrep -v '(.*)1/1(.*)Running' | wc -l)" == "0" ]
     do
       echo "Waiting for ceph to be ready"
       sleep 10
@@ -65,9 +66,9 @@ then
         /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create -f /etc/kubernetes/descriptors/monitoring --namespace=monitoring
     fi
 fi
-'
+
 # Initialize Toolbox
-: '
+
 ssh-keygen -t rsa -f key
 /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create secret generic toolbox --from-file=ssh-privatekey=key --from-file=ssh-publickey=key.pub
 rm -f key key.pub
@@ -90,5 +91,5 @@ cat <<EOF | kubectl --kubeconfig=/home/core/.kube/config create -f -
     username: $OS_USERNAME
 EOF
 /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create -f /etc/kubernetes/descriptors/toolbox/
-'
+
 exit 0
