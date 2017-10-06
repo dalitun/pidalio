@@ -27,7 +27,6 @@ then
         -f /etc/kubernetes/descriptors/ceph/ceph-stats-v1-dp.yaml \
         -f /etc/kubernetes/descriptors/ceph/ceph-stats-v1-svc.yaml
 
-
     else
         /opt/bin/kubectl --kubeconfig=/home/core/.kube/config --namespace=ceph create \
         -f /etc/kubernetes/descriptors/ceph/ceph-mds-v1-dp.yaml \
