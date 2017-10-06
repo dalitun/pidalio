@@ -1,0 +1,3 @@
+[client.bootstrap-rbd]
+  key = AQAjp9dZAAAAABAAol5LzxXVAsi5xAv4BKCdsw==
+  caps mon = "allow profile bootstrap-rbd"
