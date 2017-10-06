@@ -13,6 +13,7 @@ if [[ $i == 5 ]]; then exit 1; fi
 /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create -f /etc/kubernetes/descriptors/dns
 sleep 20
 # Initialize Ceph
+:'
 if [[ "${CEPH}" == "True" ]]
 then
     /opt/pidalio/kube/kubelet/scripts/ceph/install-ceph.sh
@@ -64,7 +65,7 @@ then
         /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create -f /etc/kubernetes/descriptors/monitoring --namespace=monitoring
     fi
 fi
-
+'
 # Initialize Toolbox
 : '
 ssh-keygen -t rsa -f key
