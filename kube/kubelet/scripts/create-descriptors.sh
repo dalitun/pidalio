@@ -19,12 +19,14 @@ then
     if [[ "${CEPH_DISK}" == "True" ]]
     then
         /opt/bin/kubectl --kubeconfig=/home/core/.kube/config --namespace=ceph create \
-        -f ceph-mds-v1-dp.yaml \
-        -f ceph-mon-v1-svc.yaml \
-        -f ceph-mon-v1-dp.yaml \
-        -f ceph-mon-check-v1-dp.yaml \
-        -f ceph-osd-v1-ds.yaml \
-        --namespace=ceph
+        -f /etc/kubernetes/descriptors/ceph/ceph-mds-v1-dp.yaml \
+        -f /etc/kubernetes/descriptors/ceph/ceph-mon-check-v1-dp.yaml \
+        -f /etc/kubernetes/descriptors/ceph/ceph-mon-v1-dp.yaml \
+        -f /etc/kubernetes/descriptors/ceph/ceph-mon-v1-svc.yaml \
+        -f /etc/kubernetes/descriptors/ceph/ceph-osd-v1-ds-disk.yaml \
+        -f /etc/kubernetes/descriptors/ceph/ceph-stats-v1-dp.yaml \
+        -f /etc/kubernetes/descriptors/ceph/ceph-stats-v1-svc.yaml
+
 
     else
         /opt/bin/kubectl --kubeconfig=/home/core/.kube/config --namespace=ceph create \

@@ -33,6 +33,8 @@ spec:
             }
           }
     spec:
+      nodeSelector:
+        network: master
       serviceAccount: default
       volumes:
         - name: ceph-conf
@@ -47,9 +49,6 @@ spec:
         - name: ceph-bootstrap-rgw-keyring
           secret:
             secretName: ceph-bootstrap-rgw-keyring
-        - name: ceph-bootstrap-rbd-keyring
-          secret:
-            secretName: ceph-bootstrap-rbd-keyring
       containers:
         - name: ceph-mon
           image: ceph/daemon:latest
@@ -80,8 +79,6 @@ spec:
               mountPath: /var/lib/ceph/bootstrap-mds
             - name: ceph-bootstrap-rgw-keyring
               mountPath: /var/lib/ceph/bootstrap-rgw
-            - name: ceph-bootstrap-rbd-keyring
-              mountPath: /var/lib/ceph/bootstrap-rbd
           livenessProbe:
               tcpSocket:
                 port: 6789
@@ -94,7 +91,7 @@ spec:
           resources:
             requests:
               memory: "50Mi"
-              cpu: "1000m"
+              cpu: "100m"
             limits:
               memory: "100Mi"
-              cpu: "2000m"
+              cpu: "200m"
