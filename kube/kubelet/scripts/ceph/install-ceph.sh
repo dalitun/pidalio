@@ -20,3 +20,4 @@ echo AQDP299XAAAAABAA9ut3smkroIdHsYCfqf5YWQ== > ceph-client-key
 /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create secret generic ceph-client-key --from-file=ceph-client-key --namespace=ceph
 /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create secret generic ceph-client-key --from-file=ceph-client-key --namespace=monitoring
 /opt/bin/kubectl --kubeconfig=/home/core/.kube/config create secret generic ceph-client-key --from-file=ceph-client-key
+/opt/bin/kubectl --kubeconfig=/home/core/.kube/config create secret generic ceph-secret-admin --from-file=ceph-client-key --type=kubernetes.io/rbd --namespace=ceph
