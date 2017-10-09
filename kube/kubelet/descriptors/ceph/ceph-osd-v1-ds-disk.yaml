@@ -74,6 +74,8 @@ spec:
               value: disk
             - name: OSD_FORCE_ZAP
               value: "1"
+            - name: OSD_BLUESTORE
+              value: "1"
           livenessProbe:
               tcpSocket:
                 port: 6800
