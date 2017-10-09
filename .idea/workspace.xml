@@ -31,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-osd-v1-ds-disk.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="75" column="22" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="75" selection-end-column="25" />
+              <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -1072,12 +1072,12 @@
       <option name="presentableId" value="Default" />
       <updated>1495014564903</updated>
       <workItem from="1495014566703" duration="16930000" />
-      <workItem from="1507217052406" duration="22075000" />
+      <workItem from="1507217052406" duration="22394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39005000" />
+    <option name="totallyTimeSpent" value="39324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="26" width="1608" height="854" extended-state="6" />
@@ -1453,7 +1453,7 @@
     <entry file="file://$PROJECT_DIR$/kube/kubelet/descriptors/ceph/ceph-osd-v1-ds-disk.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="75" column="22" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="75" selection-end-column="25" />
+          <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
           <folding />
         </state>
       </provider>
